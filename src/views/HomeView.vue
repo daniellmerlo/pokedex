@@ -1,9 +1,13 @@
-<script setup>
-import TheWelcome from '../components/TheWelcome.vue'
-</script>
-
 <template>
-  <main>
-    <TheWelcome />
-  </main>
+  <div class="container">
+    <div class="row mt-2">
+      <div class="col mb-2">placo</div>
+      <div class="col mb-2">pokédex</div>
+    </div>
+  </div>
 </template>
+<script>
+export default {
+  name: 'Home'
+}
+</script>
