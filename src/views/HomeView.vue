@@ -11,7 +11,7 @@
             <div class="pokemon">
               <!-- Apresentado classes de Transicao -->
               <transition>
-                <img src="@/assets/imgs/pokemons/001.png" v-show="exibir">
+                <img src="@/assets/imgs/pokemons/001.png" v-if="exibir">
               </transition>
             </div>
           </div>
