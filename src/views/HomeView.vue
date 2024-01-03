@@ -84,13 +84,22 @@ export default {
 }
 </script>
 
-<style>
+<style scoped>
 body {
   background-color: #dee3eb;
 }
 </style>
 
 <style scoped>
+.v-enter-from {
+  opacity: 0
+}
+.v-enter-active {
+  transition: 2s;
+}
+.v-enter-to {
+  opacity: 1;
+}
 .pokedex {
   padding: 20px;
   background-color: #ffffff;
