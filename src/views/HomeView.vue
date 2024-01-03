@@ -9,7 +9,9 @@
 
           <div class="card-body bg-pokebola bg-normal">
             <div class="pokemon">
-              <img src="@/assets/imgs/pokemons/001.png" v-show="exibir">
+              <transition>
+                <img src="@/assets/imgs/pokemons/001.png" v-show="exibir">
+              </transition>
             </div>
           </div>
 
