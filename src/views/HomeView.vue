@@ -9,6 +9,7 @@
 
           <div class="card-body bg-pokebola bg-normal">
             <div class="pokemon">
+              <!-- Apresentado classes de Transicao -->
               <transition>
                 <img src="@/assets/imgs/pokemons/001.png" v-show="exibir">
               </transition>
