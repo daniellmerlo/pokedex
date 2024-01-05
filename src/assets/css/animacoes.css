@@ -31,6 +31,7 @@
   transform: translateX(150px);
 }
 
+/* zoom */
 .zoom-enter-from,
 .zoom-leave-to {
   transform: scale(0);
@@ -42,4 +43,21 @@
 .zoom-enter-to,
 .zoom-leave-from {
   transform: scale(1);
+}
+
+/* flip */
+.flip-enter-active {
+  animation: flip 2s;
+}
+.flip-leave-active {
+  animation: flip 2s reverse;
+}
+
+@keyframes flip {
+  from {
+    transform: rotateY(-80deg);
+  }
+  to {
+    transform: rotateY(0deg);
+  }
 }
