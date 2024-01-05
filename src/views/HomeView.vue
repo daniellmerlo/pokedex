@@ -1,7 +1,6 @@
 <template>
   <div class="container">
     <div class="row mt-2">
-      
       <!-- início lado esquerdo -->
       <div class="col mb-2">
         <div class="card palco">
@@ -11,36 +10,34 @@
             <div class="pokemon">
               <!-- Apresentado classes de Transicao -->
               <transition name="slide">
-                <img src="@/assets/imgs/pokemons/001.png" v-if="exibir">
+                <img src="@/assets/imgs/pokemons/001.png" v-if="exibir" />
               </transition>
               <div class="evolucoes">
                 <transition name="fade">
-                  <img src="@/assets/imgs/pokemons/003.png" v-if="exibir">
+                  <img src="@/assets/imgs/pokemons/003.png" v-if="exibir" />
                 </transition>
                 <transition name="fade">
-                  <img src="@/assets/imgs/pokemons/002.png" v-if="exibir">
+                  <img src="@/assets/imgs/pokemons/002.png" v-if="exibir" />
                 </transition>
               </div>
             </div>
           </div>
 
           <div class="card-footer">
-         
-          <nav class="nav nav-pills nav-fill">
-            <!-- menu de navegação -->
-          </nav>
+            <nav class="nav nav-pills nav-fill">
+              <!-- menu de navegação -->
+            </nav>
 
-          <div class="detalhes">
-            <!-- exibe dados de acordo com o menu de navegação -->
-          </div>
-
+            <div class="detalhes">
+              <!-- exibe dados de acordo com o menu de navegação -->
+            </div>
           </div>
         </div>
       </div>
       <!-- fim lado esquerdo -->
 
       <!-- início lado direito -->
-      <div class="col mb-2 pokedex">        
+      <div class="col mb-2 pokedex">
         <div class="row">
           <div class="col">
             <h1>Pokédex</h1>
@@ -55,30 +52,27 @@
               <option>De A - Z</option>
             </select>
           </div>
-        
+
           <div class="col">
-            <input type="text" class="form-control" placeholder="Pesquisar pokémon">
+            <input type="text" class="form-control" placeholder="Pesquisar pokémon" />
           </div>
         </div>
 
         <div class="row">
           <div class="pokedex-catalogo">
-
             <!-- início listagem dinâmica -->
             <div class="cartao-pokemon bg-grama" @click="exibir = !exibir">
               <h1>1 Bulbasaur</h1>
               <span>grama</span>
               <div class="cartao-pokemon-img">
-                <img src="@/assets/imgs/pokemons/001.png">
+                <img src="@/assets/imgs/pokemons/001.png" />
               </div>
             </div>
             <!-- fim listagem dinâmica -->
-
           </div>
         </div>
       </div>
       <!-- fim lado direito -->
-
     </div>
   </div>
 </template>
@@ -99,48 +93,7 @@ body {
 </style>
 
 <style scoped>
-.fade-enter-from {
-  opacity: 0;
-}
-.fade-enter-active {
-  transition: opacity 1s;
-}
-.fade-enter-to {
-  opacity: 1;
-}
-.fade-leave-from {
-  opacity: 1;
-}
-.fade-leave-active {
-  transition: opacity 0.5s;
-}
-.fade-leave-to {
-  opacity: 0;
-}
-
-.slide-enter-from {
-  opacity: 0;
-  transform: translateX(-150px);
-}
-.slide-enter-active {
-  transition: all 2s;
-}
-.slide-enter-to {
-  opacity: 1;
-  transform: translateX(0px);
-}
-.slide-leave-from {
-  opacity: 1;
-  transform: translateX(0px);
-}
-.slide-leave-active {
-  transition: all 2s;
-}
-.slide-leave-to {
-  opacity: 0;
-  transform: translateX(150px);
-}
-
+@import '@/assets/css/animacoes.css';
 .pokedex {
   padding: 20px;
   background-color: #ffffff;
@@ -171,15 +124,15 @@ body {
   box-shadow: 2px 2px 2px rgba(200, 200, 200, 0.77);
 }
 
-.cartao-pokemon h1{
-  color:#fff;
+.cartao-pokemon h1 {
+  color: #fff;
   font-size: 14px;
   margin: 5px 0px 0px 5px;
   padding: 0px;
 }
 
-.cartao-pokemon span{
-  color:#fff;
+.cartao-pokemon span {
+  color: #fff;
   position: absolute;
   background: rgba(255, 255, 255, 0.3);
   font-size: 12px;
@@ -189,9 +142,9 @@ body {
 }
 
 .cartao-pokemon img {
-    max-width:60%;
-    max-height:60%;
-    float: right;
+  max-width: 60%;
+  max-height: 60%;
+  float: right;
 }
 
 .bg-grama {
@@ -199,23 +152,23 @@ body {
 }
 
 .bg-fogo {
-  background-color: #e47373
+  background-color: #e47373;
 }
 
 .bg-agua {
-  background-color: #5a9ed2
+  background-color: #5a9ed2;
 }
 
 .bg-inseto {
-  background-color: #26d3ab
+  background-color: #26d3ab;
 }
 
 .bg-normal {
-  background-color: #cecece
+  background-color: #cecece;
 }
 
 .bg-pokebola {
-  background-image: url("~@/assets/imgs/pokebola.png");
+  background-image: url('~@/assets/imgs/pokebola.png');
   background-repeat: no-repeat;
   background-position: bottom right;
 }
@@ -251,5 +204,4 @@ body {
   max-height: 100%;
   float: right;
 }
-
 </style>
